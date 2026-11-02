@@ -11150,17 +11150,6 @@ Correlación entre silueta y Dice (todas las imágenes y K): 0.214
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=74de2a60">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Actividad-6---Video">Actividad 6 - Video<a class="anchor-link" href="#Actividad-6---Video">¶</a></h2><p>El video (máximo 3 minutos, dirigido a DermAlpes y a un público no especializado) se entrega aparte por Bloque Neón.</p>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8def61a0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -11263,12 +11252,12 @@ Correlación entre silueta y Dice (todas las imágenes y K): 0.214
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Uso-de-herramientas-de-IA-generativa">Uso de herramientas de IA generativa<a class="anchor-link" href="#Uso-de-herramientas-de-IA-generativa">¶</a></h1><p><strong>Herramienta y tipo de uso.</strong> Usamos Claude (Anthropic) a través de Claude Code en Visual Studio Code, de dos formas distintas:</p>
 <ol>
-<li><strong>Como apoyo para desarrollar el laboratorio.</strong> Preparó la carpeta de datos: filtró las 20 imágenes del enunciado entre las 900 del conjunto y consiguió sus máscaras de referencia, que no venían en la carpeta que teníamos (las bajó del repositorio oficial del reto ISIC 2016). También generó el código del pipeline, de las búsquedas y de las visualizaciones, y nos apoyó en la redacción de los análisis a partir de los resultados del notebook.</li>
+<li><strong>Como apoyo para desarrollar el laboratorio.</strong> Preparó la carpeta de datos: filtró las 20 imágenes del enunciado entre las 900 del conjunto y consiguió sus máscaras de referencia, que no venían en la carpeta. También ayudó a mejorar el código del pipeline, de las búsquedas y de las visualizaciones, y nos apoyó en la redacción de los análisis a partir de los resultados del notebook.</li>
 <li><strong>Para la actividad de verificación.</strong> Abrimos una sesión nueva e independiente de Claude, sin acceso a las imágenes ni al resto del laboratorio, y le pedimos una recomendación de β, λ, K y de un criterio para construir la máscara. El historial completo está más abajo y en el archivo <code>Historial_IAG_verificacion.md</code>.</li>
 </ol>
 <p><strong>Prompts principales utilizados.</strong></p>
 <ul>
-<li>Desarrollo: "Resuelve el laboratorio 4. La carpeta ISBI2016_ISIC_Part1_Training_Data contiene muchas imágenes, solo filtra las que pide el enunciado y mételas en una carpeta "data" dentro de lab4."</li>
+<li>Desarrollo: "A partir del el enunciado del laboratorio 4 y de nuestra primera versión, mejora la redacción y verifica los resultados. Si se puede mejorar el pipeline, propon una idea para nosotros verificar y dar o no vía libre para implementarla."</li>
 <li>Verificación: los dos mensajes que aparecen textualmente en el historial de abajo. En ninguno se adjuntaron imágenes ni se mencionó el nombre del conjunto de datos, solo se describieron las imágenes.</li>
 </ul>
 <h3 id="Actividad-de-verificaci%C3%B3n">Actividad de verificación<a class="anchor-link" href="#Actividad-de-verificaci%C3%B3n">¶</a></h3><p><strong>¿La recomendación funcionó en nuestras imágenes?</strong> En parte. Su criterio para construir la máscara funcionó muy bien: con K escogido por silueta dio un Dice promedio de 0.894 en las imágenes de ajuste, prácticamente igual a nuestra mejor configuración (0.895). Pero la recomendación completa, tal como la dio en la primera respuesta (K = 4 fijo), dio 0.861, y su ajuste de la segunda respuesta (bajar λ/β a 0.2) dio 0.886. Ninguna de las dos superó lo que ya teníamos.</p>
